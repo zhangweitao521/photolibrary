@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'com.novoda.bintray-release'
 android {
     compileSdkVersion 26
 
@@ -23,7 +23,23 @@ android {
     }
 
 }
-
+allprojects {
+    tasks.withType(Javadoc) {//兼容中文字符
+        options {
+            encoding "UTF-8"
+            charSet 'UTF-8'
+            links "http://docs.oracle.com/javase/7/docs/api"
+        }
+    }
+}
+publish {
+    userOrg = 'zhangweitao'//bintray.com用户名
+    groupId = 'com.zwt.photolibrary'//jcenter上的路径
+    artifactId = 'photoselect'//项目名称
+    publishVersion = '1.0.2'//版本号
+    desc = 'a photo select for android'//描述，不重要
+    website = 'https://github.com/zhangweitao521/photolibrary'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
+}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -35,3 +51,5 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:3.8.0'
     compile 'com.github.chrisbanes.photoview:library:+'
 }
+
+
