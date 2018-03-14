@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008574</color>
+    <color name="colorPrimaryDark">#036654</color>
+    <color name="colorAccent">#008574</color>
+
+    <color name="photo_color_ffffff">@android:color/white</color>
+    <color name="photo_color_4a4a4a">#4a4a4a</color>
+    <color name="photo_color_9b9b9b">#9b9b9b</color>
+    <color name="photo_color_dcdcdc">#dcdcdc</color>
+    <color name="photo_image_normal_overlay">#20000000</color>
+    <color name="photo_image_pressed_overlay">#80000000</color>
+    <color name="photo_select_bottom">#cc000000</color>
+
+</resources>

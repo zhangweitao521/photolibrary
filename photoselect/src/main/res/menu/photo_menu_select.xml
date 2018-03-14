@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/photo_action_picker_done"
+        android:orderInCategory="100"
+        android:textSize="@dimen/photo_text_size16"
+        android:title="@string/photo_done"
+        app:showAsAction="ifRoom" />
+</menu>
