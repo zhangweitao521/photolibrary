@@ -1,4 +1,4 @@
-##photolibrary
+## photolibrary
 
 - 支持多张图片选择；
 - 支持拍照；
@@ -10,7 +10,7 @@
 
 ![](http://github.com/zhangweitao521/photolibrary/raw/master/screen/TIM图片20180315120708.jpg)
 
-##useage
+## useage
 
 dependencies {
    compile 'com.zwt.photolibrary:photoselect:1.0.2'
@@ -37,7 +37,7 @@ PhotoPreviewIntent intent = new PhotoPreviewIntent(MainActivity.this);
 intent.setCurrentPath(path).setPhotoPaths(list);  
 startActivity(intent);
 ```
-##获取选择的照片
+## 获取选择的照片
 ```java
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {  
@@ -104,6 +104,6 @@ startActivity(intent);
     </paths>
 </resources>
 ```
-##更新日志
+## 更新日志
 Version: 1.0.2
 - 修复权限问题；
