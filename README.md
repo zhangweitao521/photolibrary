@@ -6,7 +6,6 @@ example
 ==============================================================
 ![image](https://github.com/zhangweitao521/photolibrary/raw/master/screen/TIM图片20180315120703.jpg)
 ![image](http://github.com/zhangweitao521/photolibrary/raw/master/screen/TIM图片20180315120657.jpg)
-![image](http://github.com/zhangweitao521/photolibrary/blob/master/screen/TIM%E5%9B%BE%E7%89%8720180315120657.jpg)
 
 useage
 ==============================================================
@@ -24,7 +23,7 @@ startActivityForResult(intent, 1);
 ==============================================================
 PhotoPreviewIntent intent = new PhotoPreviewIntent(MainActivity.this);  
 intent.setCurrentPath(path).setPhotoPaths(list);  
-startActivity(intent);  
+startActivity(intent);    
                     
 获取选择的照片
 ==============================================================
