@@ -13,6 +13,15 @@ dependencies {
    compile 'com.zwt.photolibrary:photoselect:1.0.2'
 }
 
+maven
+==============================================================
+<dependency>
+  <groupId>com.zwt.photolibrary</groupId>
+  <artifactId>photoselect</artifactId>
+  <version>1.0.2</version>
+  <type>pom</type>
+</dependency>
+
 选择照片
 ==============================================================
 PhotoSelectIntent intent = new PhotoSelectIntent(MainActivity.this);  
