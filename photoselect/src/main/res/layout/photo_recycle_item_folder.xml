@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/photo_color_ffffff"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/photo_padding8"
+    android:paddingLeft="@dimen/photo_padding16"
+    android:paddingRight="@dimen/photo_padding16"
+    android:paddingTop="@dimen/photo_padding8">
+
+    <ImageView
+        android:id="@+id/photo_item_folder_iv_first"
+        android:layout_width="@dimen/photo_big_image_size"
+        android:layout_height="@dimen/photo_big_image_size" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/photo_padding16"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/photo_item_folder_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/photo_color_4a4a4a"
+            android:textSize="@dimen/photo_text_size17" />
+
+        <TextView
+            android:id="@+id/photo_item_folder_tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/photo_color_9b9b9b"
+            android:textSize="@dimen/photo_text_size13" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/photo_item_folder_iv_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/photo_default_icon_radio"
+        android:tint="@color/colorAccent"
+        android:visibility="gone" />
+</LinearLayout>
