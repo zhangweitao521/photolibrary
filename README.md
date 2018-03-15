@@ -1,41 +1,44 @@
-photolibrary
-==============================================================
-关于多张图片选择、与拍照
+##photolibrary
 
-example
-==============================================================
-![image](https://github.com/zhangweitao521/photolibrary/raw/master/screen/TIM图片20180315120703.jpg)
-![image](http://github.com/zhangweitao521/photolibrary/raw/master/screen/TIM图片20180315120657.jpg)
+- 支持多张图片选择；
+- 支持拍照；
 
-useage
-==============================================================
+## 图片 example
+![](https://github.com/zhangweitao521/photolibrary/raw/master/screen/TIM图片20180315120703.jpg)
+
+![](http://github.com/zhangweitao521/photolibrary/raw/master/screen/TIM图片20180315120657.jpg)
+
+![](http://github.com/zhangweitao521/photolibrary/raw/master/screen/TIM图片20180315120708.jpg)
+
+##useage
+
 dependencies {
    compile 'com.zwt.photolibrary:photoselect:1.0.2'
 }
 
-maven
-==============================================================
+## maven
+```html
 <dependency>
   <groupId>com.zwt.photolibrary</groupId>
   <artifactId>photoselect</artifactId>
   <version>1.0.2</version>
   <type>pom</type>
 </dependency>
-
-选择照片
-==============================================================
+```
+## 选择照片
+```java
 PhotoSelectIntent intent = new PhotoSelectIntent(MainActivity.this);  
 intent.setShowCamera(true).setShowMulti(true).setMaxNumber(11);  
 startActivityForResult(intent, 1);
-                        
-预览照片
-==============================================================
+```
+## 预览照片
+```java
 PhotoPreviewIntent intent = new PhotoPreviewIntent(MainActivity.this);  
 intent.setCurrentPath(path).setPhotoPaths(list);  
-startActivity(intent);    
-                    
-获取选择的照片
-==============================================================
+startActivity(intent);
+```
+##获取选择的照片
+```java
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {  
         super.onActivityResult(requestCode, resultCode, data);  
@@ -46,10 +49,10 @@ startActivity(intent);
                     break;  
             }  
         }  
-    }  
-    
-manifest //设置权限以及注册Activity
-==============================================================
+    }
+```
+## manifest //设置权限以及注册Activity
+```html
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">  
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>  
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>  
@@ -65,10 +68,10 @@ manifest //设置权限以及注册Activity
             android:theme="@style/PhotoAppTheme" />  
     
   </application>  
-</manifest>  
-
-android7.0拍照权限问题
-==============================================================
+</manifest> 
+```
+## android7.0拍照权限问题
+```html
 1.<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     >
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
@@ -100,8 +103,7 @@ android7.0拍照权限问题
             path="." />
     </paths>
 </resources>
-
-更新日志
-==============================================================
+```
+##更新日志
 Version: 1.0.2
-* 修复权限问题
+- 修复权限问题；
