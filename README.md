@@ -16,53 +16,48 @@ dependencies {
 
 选择照片
 ==============================================================
-PhotoSelectIntent intent = new PhotoSelectIntent(MainActivity.this);
-intent.setShowCamera(true).setShowMulti(true).setMaxNumber(11);
+PhotoSelectIntent intent = new PhotoSelectIntent(MainActivity.this);  
+intent.setShowCamera(true).setShowMulti(true).setMaxNumber(11);  
 startActivityForResult(intent, 1);
                         
 预览照片
 ==============================================================
-PhotoPreviewIntent intent = new PhotoPreviewIntent(MainActivity.this);
-                    intent.setCurrentPath(path)
-                          .setPhotoPaths(list);
-                    startActivity(intent);
+PhotoPreviewIntent intent = new PhotoPreviewIntent(MainActivity.this);  
+intent.setCurrentPath(path).setPhotoPaths(list);  
+startActivity(intent);  
                     
 获取选择的照片
 ==============================================================
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == RESULT_OK) {
-            switch (requestCode) {
-                case 1:
-                    list = data.getStringArrayListExtra(PhotoAction.ACTION_RESULT_LIST);
-                    break;
-            }
-        }
-    }
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {  
+        super.onActivityResult(requestCode, resultCode, data);  
+        if (resultCode == RESULT_OK) {  
+            switch (requestCode) {  
+                case 1:  
+                    list = data.getStringArrayListExtra(PhotoAction.ACTION_RESULT_LIST);  
+                    break;  
+            }  
+        }  
+    }  
     
 manifest //设置权限以及注册Activity
 ==============================================================
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    >
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.CAMERA" />
-  <application
-    ...
-    >
-    ...
-       <!--@style/PhotoAppTheme是图片选择界面样式-->
-       <activity
-            android:name="com.zwt.photoselect.ui.PhotoSelectActivity"
-            android:theme="@style/PhotoAppTheme" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">  
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>  
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>  
+    <uses-permission android:name="android.permission.CAMERA" />  
+  <application ...>  
+       <!--@style/PhotoAppTheme是图片选择界面样式-->  
+       <activity  
+            android:name="com.zwt.photoselect.ui.PhotoSelectActivity"  
+            android:theme="@style/PhotoAppTheme" />  
 
-        <activity
-            android:name="com.zwt.photoselect.ui.PhotoPreviewActivity"
-            android:theme="@style/PhotoAppTheme" />
+        <activity  
+            android:name="com.zwt.photoselect.ui.PhotoPreviewActivity"  
+            android:theme="@style/PhotoAppTheme" />  
     
-  </application>
-</manifest>
+  </application>  
+</manifest>  
 
 android7.0拍照权限问题
 ==============================================================
