@@ -17,10 +17,8 @@ dependencies {
 选择照片
 ==============================================================
 PhotoSelectIntent intent = new PhotoSelectIntent(MainActivity.this);
-                        intent.setShowCamera(true)
-                              .setShowMulti(true)
-                              .setMaxNumber(11);
-                        startActivityForResult(intent, 1);
+intent.setShowCamera(true).setShowMulti(true).setMaxNumber(11);
+startActivityForResult(intent, 1);
                         
 预览照片
 ==============================================================
