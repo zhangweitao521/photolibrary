@@ -11,11 +11,11 @@
 ![](http://github.com/zhangweitao521/photolibrary/raw/master/screen/TIM图片20180315120708.jpg)
 
 ## useage
-
+```html
 dependencies {
    compile 'com.zwt.photolibrary:photoselect:1.0.2'
 }
-
+```
 ## maven
 ```html
 <dependency>
